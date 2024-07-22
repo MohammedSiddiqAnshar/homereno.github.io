@@ -12,9 +12,10 @@
 header{
     width: 100%;
     height: 100vh;
-    background: url(homereno.jpg);
+    background: url(wp6700662.jpg);
     background-size: cover;
-    font-family: "anton",'Times New Roman', Times, serif;
+    font-family: fantasy;
+    
     
 }
 nav{
@@ -26,13 +27,14 @@ nav{
     align-items: center;
 }
 .name{
-    letter-spacing: 2px;
     font-size: 2em;
-    font-weight: 200;
-
-    color: darkred;
-    
-    text-align: left;
+    background: url(axe-lilliana-didovic.jpg);
+    background-size: cover;
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+   font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    text-emphasis-style: bold;
 }
 .menu{
     text-decoration: none;
@@ -40,6 +42,7 @@ nav{
     letter-spacing: 2px;
     font-style: normal;
     padding: 20px 10px;
+    text-align: left;
 
 }
 .menu a:hover{
@@ -71,12 +74,11 @@ nav{
 }
 .cmnt span{
     letter-spacing: 3px;
-    color:black;
+    color:rgb(210, 21, 21);
 }
 .cmnt h1{
 font-size: 1cm;
 color: palevioletred;
-b
 }
 .cmnt a{
     text-decoration: none;
@@ -90,6 +92,6 @@ b
 .cmnt a:hover{
     border: 1px solid  cadetblue);
     background: transparent;
-
+}
 
 
