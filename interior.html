@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interior Design - Home Renovation App</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 10px 0;
+            text-align: center;
+        }
+        nav {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 18px;
+        }
+        main {
+            padding: 20px;
+        }
+        section {
+            margin-bottom: 20px;
+        }
+        .featured-projects, .Aboutus, .contact-form {
+            background-color: #fff;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+        }
+        .featured-projects img {
+            width: 100%;
+            height: auto;
+            margin-bottom: 10px;
+        }
+        
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px 0;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+        @media (max-width: 600px) {
+            nav {
+                flex-direction: column;
+            }
+            nav a {
+                margin-bottom: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Home Reno</h1>
+        <nav>
+            <a href="login.html">BookNow!</a>
+            <a href="creater.html">Contractors</a>
+            <a href="#Aboutus">AboutUs</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+    <main>
+        <section id="projects" class="featured-projects">
+            <h2>Featured Projects</h2>
+            <div class="project">
+                <img src="https://img-s-msn-com.akamaized.net/tenant/amp/entityid/AA1ddE1e.img?w=4206&h=2804&m=4&q=30" alt="Living Room Design">
+                <p>Modern Living Room: A perfect blend of comfort and style with contemporary furniture and elegant decor.</p>
+            </div>
+            <div class="project">
+                <img src="https://www.tollbrothers.com/blog/wp-content/uploads/2019/02/9-Solano-Bianca_Kitchen-to-Outdoor-Room.jpg" alt="Kitchen Design">
+                <p>Spacious Kitchen: A functional and stylish kitchen design with state-of-the-art appliances and ample storage.</p>
+            </div>
+        </section>
+        <section id="Aboutus" class="Aboutus">
+            <h2>AboutUs</h2>
+            <p>
+                
+                
+                Welcome to <b>HomeReno</b>,
+                your ultimate partner in transforming your living spaces.<br> <li> HomeReno, we believe that your home is a reflection of your personality, style, and dreams.</li><br><li> Our mission is to bring your vision to life with innovative designs, seamless execution, and a touch of excellence.</li>
+                <br>
+                <h3>Who We Are</h3>  <br>
+                
+                <li>RenovateEase was founded with a passion for redefining the way people experience their homes.</li><br><li> We are a team of dedicated professionals including architects, interior designers, project managers, and skilled craftsmen, all working together to create stunning and functional living spaces.</li><br><li>With years of experience in the industry, we have successfully completed numerous projects ranging from small makeovers to full-scale renovations.</li>
+                <br>
+                <h3>Our Philosophy</h3>
+                <ol>
+                Our approach to home renovation is rooted in three core values:
+                <li>
+                Creativity: We believe in pushing the boundaries of design to create unique and inspiring spaces that reflect your individuality. Our team stays ahead of the latest trends and innovations in interior design to offer you creative solutions that are both beautiful and practical.</li>
+                
+                <li>Quality: At RenovateEase, quality is at the heart of everything we do. From selecting the finest materials to employing the best construction practices, we ensure that every aspect of your renovation meets the highest standards. Our commitment to quality extends beyond the physical aspects of your home to the overall experience of working with us.</li>
+                
+                <li>Customer-Centric: We understand that renovating your home can be both exciting and challenging. That's why we place a strong emphasis on clear communication, transparency, and collaboration. We work closely with you throughout every stage of the project, from initial consultation to final completion, to ensure that your needs and preferences are met.</li></ol>
+                
+                <h3>What We Offer</h3> 
+                <ol>
+                <li>Personalized Consultation</li>
+                
+                <li>Innovative Design</li>
+                <li>Seamless Execution</li>
+                
+                <li>Quality Assurance</li></ol>
+                
+                
+                <h3>Join Us on This Journey</h3>
+                
+                HomeReno is more than just a home renovation app; it's a journey towards creating a home that you love. Whether you're looking to update a single room or undertake a complete home makeover, we are here to help you every step of the way. Let us turn your dreams into reality and make your home a place where memories are made.
+                
+                
+            </p>
+        </section>
+        <section id="contact" class="contact-form">
+            <h2>Contact Us</h2>
+            <form>
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required><br><br>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required><br><br>
+                <label for="message">Message:</label><br>
+                <textarea id="message" name="message" rows="4" required></textarea><br><br>
+                <button onclick="showalert()" >Send</button>
+                <script> 
+                function showalert(){
+                    alert("Our Team will Contact You!!");
+                }
+                </script>
+            </form>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 Home Reno | Contact us at info@homereno.com | Follow us on social media</p>
+    </footer>
+</body>
+</html>

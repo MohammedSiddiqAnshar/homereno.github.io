@@ -46,9 +46,24 @@ nav{
 
 }
 .menu a:hover{
-    border: 1px solid  rgba(60, 178, 217, 0.956);
+    border: 1px solid  rgb(43, 125, 152);
     background: transparent;
 }
+.creater{
+    text-decoration: none;
+    font-size: 20px;
+    letter-spacing: 2px;
+    font-style: normal;
+    padding: 20px 10px;
+    text-align: center;
+
+}
+.creater
+    a:hover{
+        border: 1px solid  rgb(43, 125, 152);
+        background: transparent;
+}
+
 .contact{
     text-decoration:none;
     font-size: 20px;

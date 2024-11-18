@@ -1,0 +1,119 @@
+<html>
+<head>
+<center>
+<title>SIGNUP</title>
+<script type="text/javascript">
+function validation() {
+	if(document.f1.name.value=="") {
+        window.alert("Plz Enter Your Name");
+        return false;
+    } else if(document.f1.email.value=="") {
+        window.alert("Plz Enter Your E-mail:");
+        return false;
+    } else if(document.f1.email.value.indexOf('@gmail.com')==-1) {
+        window.alert("Plz Enter Your Valid E-mail");
+        return false;
+    } else if(document.f1.specification.value=="") {
+        window.alert("Plz Enter Your specification");
+        return false;
+    } else if(document.f1.addr.value=="") {
+        window.alert("Plz Enter Your location");
+        return false;
+    } else if(document.f1.country.selectedIndex==0) {
+        window.alert("Plz Select Your Country");
+        return false;
+    } else if((document.f1.rdo[0].checked==false)&&(document.f1.rdo[1].checked==false)&&(document.f1.rdo[2].checked==false)) {
+        window.alert("Plz Choose Your Gender");
+        return false;
+    }
+}
+
+document.getElementById('registerForm').addEventListener('submit', function(e) {
+    e.preventDefault();
+
+    const formData = new FormData(this);
+    const data = {};
+    formData.forEach((value, key) => (data[key] = value));
+
+    fetch('http://localhost:3000/register', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(data)
+	}).then(response => response.text())
+        .then(data => {
+        alert(data);
+        });
+});
+</script>
+</head>
+<body>
+<style>
+    body {
+        background: url(wp6700662.jpg);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        font-style: bold;
+    }
+    .subm {
+        text-decoration: none;
+        letter-spacing: 2px;
+        font-style: normal;
+        padding: 20px 10px;
+        border-radius: 8px;
+        background-color: cadetblue;
+        transition: 0.2s;
+    }
+    .subm:hover {
+        border: 1px solid cadetblue;
+        background: transparent;
+    }
+</style>
+<h3 style="text-align:center; color: rgb(0, 145, 181); font-family: Verdana, Geneva, Tahoma, sans-serif; font-size: 20px;">Fill to pick your customer</h3>
+<form name="f1" id="registerForm" action="/register" method="POST" onsubmit="return validation()">
+    <br/>
+    <style>
+    body {
+            color: burlywood;
+            font-family: Haettenschweiler;
+            align-content: center;
+        }
+        table {border-spacing: 0 10px}
+    </style>
+    <table>
+        <tr> <td> <b> Name: </b></td> <td><input type="text" name="name" size="31"></td> </tr>
+        <tr> <td> <b> E-Mail:</b></td> <td><input type="text" name="email" size="31"></td> </tr>
+        <tr> <td><b> Specification:</b></td> <td><input type="text" name="specification" size="31"></td> </tr>
+        <tr> <td><b>Location:</b></td> <td><Textarea name="addr" rows="5" cols="25"></Textarea></td> </tr>
+        <tr> 
+            <td><b>Country:</b></td> 
+            <td> <select name="country">
+            <option>---Select Your Country---</option>
+            <option>India</option>
+            <option>China</option>
+            <option>Nepal</option>
+            <option>Myanmar</option>
+            </select>
+            </td> 
+        </tr>
+        <tr>
+            <td><b> Phone:</b></td>
+            <td>
+            <input type="tel" name="phone" id="phone" placeholder="123-45-678" pattern="[789][0-9]{9}" required>
+            </td>
+        </tr>
+        <tr>
+            <td><b>Gender:</b></td>
+            <td>
+            <input type="radio" name="rdo" value="Male"> Male 
+            <input type="radio" name="rdo" value="Female"> Female 
+            <input type="radio" name="rdo" value="Transgender"> Transgender
+            </td>
+        </tr>
+    </table>
+    <input type="submit" value="Register" class="subm">
+</form>
+</body>
+</html>
